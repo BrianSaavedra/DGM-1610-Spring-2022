@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 20.0f;
-    public float turnSpeed = 50.0f;
-    public float hinput;
-    public float finput;
+    private float speed = 100.0f;
+    private float turnSpeed = 50.0f;
+    private float hinput;
+    private float finput;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         finput = Input.GetAxis("Vertical");
 
         // Makes the player move 
-        transform.Translate(Vector3.forward * Time.deltaTime * finput);
-        transform.Translate(Vector3.right *Time.deltaTime * hinput);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * finput);
+        transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * hinput);
     }
-}
+}   
