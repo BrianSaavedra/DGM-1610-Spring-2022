@@ -15,6 +15,7 @@ public class Balloon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Refrence Score Component
         
     }
 
@@ -32,7 +33,7 @@ public class Balloon : MonoBehaviour
 
         //Increase
 
-        transform.localScale += Vector3.one * scaleToIncrease ;
+        transform.localScale += Vector3.one * scaleToIncrease;
 
         if(clickToPop == 0)
         {

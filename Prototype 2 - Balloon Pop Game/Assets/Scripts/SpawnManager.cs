@@ -5,26 +5,27 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] balloonPrefabs;
-    public int balloonIndex;
+    public float startDelay = 0.5f;
+    public float spawnInterval = 1.5f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("SpawnRandomBallon", startDelay, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     void SpawnRandomBallon()
     {
+        
+        // Get a random positon on the x-axis
         Vector3 spawnPos = new Vector3(Random.Range(-5,5),10,0);
+        // Pick a Random ballon from the ballon array 
         int balloonIndex = Random.Range(0,balloonPrefabs.Length);
-        Instantiate(balloonPrefabs[balloonIndex], spawnPos, balloonPrefabs[balloonIndex].translate.rotation);
+        // Spawn Random ballon at spawn location 
+        Instantiate(balloonPrefabs[balloonIndex], spawnPos, balloonPrefabs[balloonIndex].transform.rotation);
 
         
     }
