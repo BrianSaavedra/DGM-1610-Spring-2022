@@ -37,6 +37,7 @@ public class MoveAndShoot : MonoBehaviour
         if(shotDelay <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
+            shotDelay = startDelay;
         }
         else
         {
