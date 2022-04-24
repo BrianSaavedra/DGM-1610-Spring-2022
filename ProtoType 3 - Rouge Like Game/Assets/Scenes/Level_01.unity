@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c5aa5de093b1d448afd44ab72c4edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
+  slider: {fileID: 409680701}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  stopDistance: 5
+  stopDistance: 0
 --- !u!114 &1953402155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   damage: 2
   attackRate: 2
   player: {fileID: 1494983034}
-  attackRange: 0
+  attackRange: 10
 --- !u!1001 &1996862450
 PrefabInstance:
   m_ObjectHideFlags: 0
