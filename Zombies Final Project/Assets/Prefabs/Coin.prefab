@@ -109,4 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPickup: 0
-  pickupAmount: 200
+  pickupAmount: 6
+  scoreManager: {fileID: 0}
+  ScoreToGive: 1000

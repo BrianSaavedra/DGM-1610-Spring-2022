@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
    public int curHP;
     public int maxHP;
+    public HealthBar healthBar;
 
     public float moveSpeed = 5f;
     private Rigidbody rb;
@@ -30,11 +31,15 @@ public class PlayerController : MonoBehaviour
     public int currentAmmo;
     public Camera viewCam;
 
+
+
     
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        curHP = maxHP;
+        healthBar.SetHealth(maxHP);
 
         Cursor.visible = false;
         Cursor. lockState = CursorLockMode.Locked;
@@ -117,6 +122,7 @@ public class PlayerController : MonoBehaviour
     public void TakenDamage(int damage)
     {
         curHP -= damage;
+        healthBar.SetHealth(curHP);
 
         if(curHP <= 0)
         {
