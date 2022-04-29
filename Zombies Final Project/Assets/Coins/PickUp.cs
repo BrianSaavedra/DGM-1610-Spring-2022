@@ -4,34 +4,35 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-    public enum PickUpType{Key, Coin, Gem};
+   public enum PickUpType{Coin};
     public PickUpType currentPickup;
     public int pickupAmount;
     private PlayerController playerController;
+
+    public ScoreManager scoreManager; 
+    public int ScoreToGive = 1000; 
+
     // Start is called before the first frame update
     void Start()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            if(currentPickup == PickUpType.Key)
+            if(currentPickup == PickUpType.Coin)
             {
-                Debug.Log("You have pick up a Golden Key!");
+                Debug.Log("You have pick up a Boss Coin");
+                scoreManager.IncreaseScoreText(ScoreToGive);
+
             }
-            else if(currentPickup == PickUpType.Coin)
-            {
-                Debug.Log("You have picked up"+ pickupAmount +"Coins");
-            }
-            else if(currentPickup == PickUpType.Gem)
-            {
-                Debug.Log("You have picked up"+ pickupAmount+"Gems");
-            }
-            Destroy(gameObject);
+            
         }
     }
+
+    
 }

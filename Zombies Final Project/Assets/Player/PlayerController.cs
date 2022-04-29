@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public int currentAmmo;
     public Camera viewCam;
 
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();

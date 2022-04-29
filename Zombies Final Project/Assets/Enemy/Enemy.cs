@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     public int maxHP;
 
-    [Header("Enemy Attack")]
+    public GameObject lootDrop;
 
     public int damage = 1;
     public float attackRate;
@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
         if(curHP <= 0)
         {
             Die();
+            LootDrop();
         }
 
         
@@ -44,6 +45,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        
     }
 
     void Attack()
@@ -51,5 +53,10 @@ public class Enemy : MonoBehaviour
         lastAttackTime = Time.time;
         player.TakenDamage(damage);
         
+    }
+
+    void LootDrop()
+    {
+        Instantiate(lootDrop, transform.position, Quaternion.identity);
     }
 }
