@@ -971,12 +971,12 @@ MonoBehaviour:
   curHP: 4
   maxHP: 4
   moveSpeed: 5
-  AttackRange: 3
-  attackRate: 3
   damage: 3
+  attackRange: 0
+  attackRate: 3
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!50 &1494983035
 Rigidbody2D:
   serializedVersion: 4
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d02e15d7621d342867aaa4d19aa78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 10
   stopDistance: 0
 --- !u!114 &1953402155
 MonoBehaviour:
@@ -1334,9 +1334,12 @@ GameObject:
   - component: {fileID: 2146506468}
   - component: {fileID: 2146506467}
   - component: {fileID: 2146506466}
+  - component: {fileID: 2146506472}
+  - component: {fileID: 2146506471}
+  - component: {fileID: 2146506473}
   m_Layer: 0
   m_Name: Enemy_MoveShoot
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,6 +1473,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2146506471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146506465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df604d9771fa1c42a38193110d81852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+--- !u!114 &2146506472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146506465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d02e15d7621d342867aaa4d19aa78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  stopDistance: 0
+--- !u!114 &2146506473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146506465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48ac60e5d740164d99a21250035b16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHP: 10
+  maxHP: 3
+  damage: 5
+  attackRate: 5
+  player: {fileID: 1494983034}
+  attackRange: 5
 --- !u!1001 &7365388237115274413
 PrefabInstance:
   m_ObjectHideFlags: 0

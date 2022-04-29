@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Enemy Attack")]
 
-    public int damage;
+    public int damage = 1;
     public float attackRate;
     private float lastAttackTime;
     public PlayerController player; 
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakenDamage(int damage)
     {
         curHP -= damage;
 
@@ -49,7 +49,8 @@ public class Enemy : MonoBehaviour
     void Attack()
     {
         lastAttackTime = Time.time;
-        player.TakeDamage(damage);
+        player.TakenDamage(damage);
+        
     }
 
 }

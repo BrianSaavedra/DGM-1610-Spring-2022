@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy's : MonoBehaviour
+public class Enemys : MonoBehaviour
 {
-     public int ScoreToGive = 100; //Score for Balloon pop. 
+    public int ScoreToGive = 100; //Score for Balloon pop. 
     
     public int clickToPop = 3; //Clicks for Balloon pop.
 
@@ -15,15 +15,10 @@ public class Enemy's : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Refrence Score Component
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnMouseDown()
     {

@@ -21,7 +21,7 @@ public class SpawnManager : MonoBehaviour
     {
         
         // Get a random positon on the x-axis
-        Vector3 spawnPos = new Vector3(Random.Range(-5,5),10,0);
+        Vector3 spawnPos = new Vector3(Random.Range(-5,-2),10,0);
         // Pick a Random ballon from the ballon array 
         int balloonIndex = Random.Range(0,balloonPrefabs.Length);
         // Spawn Random ballon at spawn location 

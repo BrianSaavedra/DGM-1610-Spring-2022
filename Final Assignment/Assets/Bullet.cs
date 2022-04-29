@@ -6,14 +6,14 @@ public class Bullet : MonoBehaviour
 {
   public float speed;
 
-    private Transform player;
+    private Transform enemy;
 
     private Vector3 target;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        target = new Vector3(player.position.x, player.position.y);
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
+        target = new Vector3(enemy.position.x, enemy.position.y);
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Enemy"))
         {
             DestroyProjectile();
         }

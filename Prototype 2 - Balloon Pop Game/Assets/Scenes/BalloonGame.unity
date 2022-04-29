@@ -450,7 +450,7 @@ MonoBehaviour:
   ScoreToGive: 100
   clickToPop: 3
   scaleToIncrease: 0.1
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 1970347966}
 --- !u!1 &1028286876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1790421975636699965, guid: 2289f196d172f33409db958e88fcd13f, type: 3}

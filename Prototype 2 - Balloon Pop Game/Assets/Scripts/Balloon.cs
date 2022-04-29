@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour
 {
-    public int ScoreToGive = 100; //Score for Balloon pop. 
+     public int ScoreToGive = 100; //Score for Balloon pop. 
     
     public int clickToPop = 3; //Clicks for Balloon pop.
 
@@ -16,12 +16,7 @@ public class Balloon : MonoBehaviour
     void Start()
     {
         //Refrence Score Component
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        scoreManager = GameObject.Find("scoreManager").GetComponent<ScoreManager>();
         
     }
 

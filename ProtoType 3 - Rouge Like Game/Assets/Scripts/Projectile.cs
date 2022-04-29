@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
 
     private Transform player;
 
-    private Vector2 target;
+    private Vector3 target;
     // Start is called before the first frame update
     void Start()
     {
