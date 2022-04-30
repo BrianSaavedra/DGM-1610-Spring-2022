@@ -12,11 +12,15 @@ public class EnemyPoints : MonoBehaviour
 
     public ScoreManager scoreManager; 
 
+    public AudioClip marker;
+
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
-        
+        source = GetComponent<AudioSource>();
     }
 
 
@@ -36,6 +40,9 @@ public class EnemyPoints : MonoBehaviour
             Destroy(gameObject);
 
         }
+
+        source.PlayOneShot(marker, 1.0f);
+
     } 
 
 }

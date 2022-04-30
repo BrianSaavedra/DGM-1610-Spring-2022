@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public int currentAmmo;
     public Camera viewCam;
 
+    
+
 
 
     
@@ -43,6 +45,8 @@ public class PlayerController : MonoBehaviour
 
         Cursor.visible = false;
         Cursor. lockState = CursorLockMode.Locked;
+
+        
     }
 
     void Update()
